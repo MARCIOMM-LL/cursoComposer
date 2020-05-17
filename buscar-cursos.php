@@ -1,4 +1,4 @@
-
+#!/usr/bin/env php
 <?php
 
 #Estrutura física de pastas
