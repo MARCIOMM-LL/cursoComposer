@@ -1,0 +1,44 @@
+{
+    "name": "miranda/buscador-cursos",
+    "description": "Projeto que busca os cursos php no site alura",
+    "authors": [
+        {
+            "name": "Márcio",
+            "email": "m-andremiranda@outlook.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "symfony/dom-crawler": "^4.4",
+        "symfony/css-selector": "^5.0"
+    },
+    "autoload": {
+        "files": [
+            "functions.php"
+        ],
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "^3.0"
+    },
+    "scripts": {
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan", 
+            "@cs"
+        ],
+        "post-update-cmd": [
+            "@check"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN e PHPCS"
+    },
+    "license": "GPL-3.0",
+    "bin": ["buscar-cursos.php"]
+}
