@@ -17,7 +17,7 @@
             "functions.php"
         ],
         "psr-4": {
-            "Alura\\BuscadorDeCursos\\": "src/"
+            "src\\BuscadorDeCursos\\": "src/"
         }
     },
     "require-dev": {
